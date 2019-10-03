@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-
-const RecipeTeaser = ({recipeTitle, recipeDate, recipeSummary, recipeImg, recipeSlug}) => (
+const RecipeTeaser = ({recipeImg, recipeTitle, recipeDate, recipeSummary, recipeSlug}) => (
   <div>
     <Img fixed={recipeImg} />
     <Link to={recipeSlug}>
@@ -15,4 +14,3 @@ const RecipeTeaser = ({recipeTitle, recipeDate, recipeSummary, recipeImg, recipe
 )
 
 export default RecipeTeaser
-

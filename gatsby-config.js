@@ -2,8 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby + Drupal 8`,
     slogan: `A Match Made in Heaven`,
+<<<<<<< HEAD
     description: `A demo site made in our Gatsby + Drupal training session at Drupal Camp Chatanooga 2019!`,
     author: `nerdstein`,
+=======
+    description: `A demo site made in our Gatsby + Drupal 8 training session at Badcamp 2019`,
+    author: `@jpwitkowski11`,
+>>>>>>> 00-initial
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,7 +36,11 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
+<<<<<<< HEAD
         baseUrl: `https://d0s4q.ply.st`, // use your simplytest url here
+=======
+        baseUrl: `https://stm5d95917bef2e4-l6po7xb9wogqpizeor0rmtsio9o6wfcc.tugboat.qa/`, // optional: use your simplytest url here
+>>>>>>> 00-initial
         apiBase: `jsonapi`, // optional, defaults to `jsonapi`
       },
     },

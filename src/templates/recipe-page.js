@@ -3,26 +3,30 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from "gatsby-image"
 
+<<<<<<< HEAD
 
 const RecipePage = ({data}) => (
+=======
+const RecipePage = ({ data }) => (
+>>>>>>> 00-initial
   <Layout>
     <div>
       <h1>{data.nodeRecipe.title}</h1>
       <i><p className="publication-date">{data.nodeRecipe.created}</p></i>
       <Img fixed={data.nodeRecipe.relationships.field_image.localFile.childImageSharp.fixed} />
       <div class="details" style={{
-          display: 'flex',
-          flexDirection: 'column',
-          padding: '1em 0',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '1em 0',
       }}>
-          <h2>Overview</h2>
-          <span>Preparation time: {data.nodeRecipe.field_preparation_time}</span>
-          <span>Cooking time: {data.nodeRecipe.field_cooking_time}</span>
-          <span>Difficulty: {data.nodeRecipe.field_difficulty}</span>
-          <span>Number of servings: {data.nodeRecipe.field_number_of_servings}</span>
+        <h2>Overview</h2>
+        <span>Preparation time: {data.nodeRecipe.field_preparation_time}</span>
+        <span>Cooking time: {data.nodeRecipe.field_cooking_time}</span>
+        <span>Difficulty: {data.nodeRecipe.field_difficulty}</span>
+        <span>Number of servings: {data.nodeRecipe.field_number_of_servings}</span>
       </div>
       <h2>Instructions</h2>
-      <p dangerouslySetInnerHTML={{__html: data.nodeRecipe.field_recipe_instruction.processed}}></p>
+      <p dangerouslySetInnerHTML={{ __html: data.nodeRecipe.field_recipe_instruction.processed }}></p>
     </div>
   </Layout>
 )
@@ -43,19 +47,17 @@ export const query = graphql`
         processed
       }
       relationships{
-            field_image {
-              localFile {
-                childImageSharp {
-                  fixed(width: 500) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
+        field_image {
+          localFile {
+            childImageSharp {
+              fixed(width: 500) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
+        }
+      }
     }
   }
 `
-
 export default RecipePage
-
